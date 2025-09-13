@@ -2,11 +2,12 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className=" sticky top-0 z-50 backdrop-blur-xs px-4">
-      <div className="max-w-7xl flex justify-between items-baseline pt-10 mx-auto pb-5 border-b-1 mb-16">
-        <h1 className="font-bold font-serif">Mayank_R.</h1>
-        <nav>
-          <ul className="flex gap-14 text-sm">
+    <header className=" sticky top-0 z-50 backdrop-blur-xs">
+      <div className="grid grid-cols-5 items-center max-w-7xl px-4 pt-10 mx-auto pb-5 border-b-1 mb-16 ">
+        <h1 className="col-span-1 font-bold font-serif">Mayank_R.</h1>
+        <p className="col-span-3"></p>
+        <nav className="col-span-1">
+          <ul className="flex justify-between text-sm">
             <li>
               <button className="hover:cursor-pointer">Home</button>
             </li>

@@ -4,8 +4,8 @@ import Image from "next/image";
 const HomePage = () => {
   return (
     <>
-      <div className="px-4 flex justify-between align-left max-w-7xl mx-auto mx-4 pb-5 mb-16 ">
-        <div className="">
+      <div className="grid grid-cols-5 px-4 max-w-7xl mx-auto mx-4 pb-5 mb-16 ">
+        <div className="col-span-1">
           <Image
             src="/MRawat.jpeg"
             alt="My Profile Picture"
@@ -13,7 +13,7 @@ const HomePage = () => {
             height={150}
           />
         </div>
-        <div className="w-3/5 mx-24">
+        <div className="col-span-3 max-w-2xl">
           <p className="font-bold text-3xl mb-2">Hi, I'm Mayank Rawat</p>
           <p className="text-3xl mb-6">
             I love turning ideas into clean, functional, and user-friendly web
@@ -28,31 +28,31 @@ const HomePage = () => {
             any team or project.
           </p>
         </div>
-        <div className="">
+        <div className="col-span-1">
           <dl>
             <div>
-              <dt className="text-lg font-semibold text-gray-900">
+              <dt className="text-sm mb-2 font-semibold text-gray-900">
                 Web Development
               </dt>
-              <dd className="text-gray-600">
+              <dd className="text-gray-600 mb-8">
                 Building responsive and accessible web applications.
               </dd>
             </div>
 
             <div>
-              <dt className="text-lg font-semibold text-gray-900">
+              <dt className="text-sm mb-2 font-semibold text-gray-900">
                 Cloud Technologies
               </dt>
-              <dd className="text-gray-600">
+              <dd className="text-gray-600 mb-8">
                 Deploying and managing applications on cloud platforms.
               </dd>
             </div>
 
             <div>
-              <dt className="text-lg font-semibold text-gray-900">
+              <dt className="text-sm mb-2 font-semibold text-gray-900">
                 Machine Learning
               </dt>
-              <dd className="text-gray-600">
+              <dd className="text-gray-600 mb-8">
                 Implementing ML models to solve real-world problems.
               </dd>
             </div>
