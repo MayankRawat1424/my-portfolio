@@ -75,7 +75,7 @@ const ContactPage = () => {
       <div className="col-span-1"></div>
       <div className="col-span-1"></div>
       <div className="col-span-3">
-        <div className=" flex mt-16 justify-evenly text-4xl mb-8">
+        <div className=" flex mt-12 justify-evenly text-4xl mb-8">
           <a
             href="https://x.com/babyboytycoon"
             target="_blank"
