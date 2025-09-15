@@ -1,3 +1,34 @@
+# Portfolio Website
+
+Welcome to my personal portfolio website! This website showcases my projects, skills, experience, and provides a way to get in touch with me.
+
+---
+
+## 🌐 Live Demo
+
+[Visit the Website](https://yourusername.github.io/portfolio)
+
+---
+
+## 💻 Features
+
+- **About Me:** Learn more about my background and journey.
+- **Projects:** Showcase of my web development, AI/ML, and other projects.
+- **Skills:** Highlight of my technical and soft skills.
+- **Contact:** Contact form that sends messages directly to my email using Formspree.
+- **Responsive Design:** Works seamlessly on desktop, tablet, and mobile.
+
+---
+
+## 🛠️ Technologies Used
+
+- **React.js & Next.js:** For building a fast, interactive frontend.
+- **Tailwind CSS:** For responsive and modern styling.
+- **Formspree:** For handling contact form submissions without a backend.
+- **Vercel / GitHub Pages:** For hosting the website.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
