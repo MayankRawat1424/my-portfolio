@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MyDetails } from "./AboutData";
+import { MyDetails } from "./data/AboutData";
 import { useState } from "react";
 import Image from "next/image";
 import { FaBuildingColumns } from "react-icons/fa6";
@@ -125,7 +125,10 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32">
+      <section
+        id="about"
+        className="grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32"
+      >
         <div className="col-span-1 border-r-2 mr-16 border-gray-400">
           <h1 className="text-4xl font-bold">About</h1>
         </div>
@@ -151,16 +154,21 @@ const AboutPage = () => {
           {Object.keys(MyDetails).map((key) => (
             <p
               key={key}
-              className={`border-2 border-white rounded-sm text-xl p-2 mb-8 hover:cursor-pointer hover:bg-black hover:text-white hover:shadow-lg active:bg-white active:text-black active:border-2 active:border-black ${
-                activeSection === key ? "bg-black shadow-lg text-white" : ""
-              }`}
+              className={`rounded-sm text-xl px-4 py-2 mb-8 border border-gray-400 transition-all duration-300 
+                hover:cursor-pointer hover:bg-black hover:text-white hover:shadow-lg 
+              active:bg-[rgb(53,53,53)] active:scale-95
+            ${
+              activeSection === key
+                ? "bg-black text-white shadow-lg border-black"
+                : "bg-white text-black"
+            }`}
               onClick={() => setActiveSection(key)}
             >
               {MyDetails[key].Title}
             </p>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 };

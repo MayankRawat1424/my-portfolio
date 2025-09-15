@@ -4,7 +4,10 @@ import Image from "next/image";
 const HomePage = () => {
   return (
     <>
-      <div className=" grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 ">
+      <section
+        id="home"
+        className=" grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32"
+      >
         <div className="col-span-1 border-r-2 mr-16 border-gray-400">
           <Image
             src="/MRawat.jpeg"
@@ -59,7 +62,7 @@ const HomePage = () => {
             </div>
           </dl>
         </div>
-      </div>
+      </section>
     </>
   );
 };
