@@ -42,7 +42,7 @@ const AboutPage = () => {
         return (
           <>
             {/* <img src="/inst.jpeg" alt="" className="mb-8" /> */}
-            <p className="text-xl tracking-wider">{section.Detail}</p>
+            <p className="text-lg tracking-wider ">{section.Detail}</p>
           </>
         );
 
@@ -52,19 +52,19 @@ const AboutPage = () => {
             {Object.entries(section.Detail).map(([degree, info], index) => (
               <div
                 key={degree}
-                className="mb-8 px-4 py-2 shadow-lg border-amber-300 border-2 rounded-sm"
+                className="mb-4 px-4 py-2 shadow-lg border-gray-400 border-2 rounded-sm"
               >
-                <h3 className="text-xl font-semibold mb-2">{degree}</h3>
+                <h3 className="text-xl mb-4 font-semibold">{degree}</h3>
                 <div className="flex items-baseline gap-2">
                   <FaBuildingColumns />
-                  <p className="text-lg"> {info.Institute}</p>
+                  <p className="text-md mb-2"> {info.Institute}</p>
                 </div>
 
                 <div className="flex items-baseline gap-2">
                   <FaCalendarAlt />
-                  <p className="text-lg">{info.Duration}</p>
+                  <p className="text-md mb-2">{info.Duration}</p>
                 </div>
-                <p className="text-lg"> {info.Performance}</p>
+                <p className="text-lg font-bold"> {info.Performance}</p>
               </div>
             ))}
           </div>
@@ -73,13 +73,13 @@ const AboutPage = () => {
       case "Tools/ Technologies/ Skills":
         return (
           <div>
-            <div>
-              <h3 className="font-semibold text-xl">Hard Skills</h3>
-              <ul className="grid grid-cols-5 gap-2 ">
+            <div className="mb-8">
+              <h3 className="font-semibold text-xl mb-2">Hard Skills</h3>
+              <ul className="grid grid-cols-5 gap-4 ">
                 {section.Detail["Hard Skills"].map((skill, index) => (
                   <li
                     key={skill}
-                    className="p-2 text-center my-2 rounded place-items-center text-lg"
+                    className="p-2 rounded text-sm flex items-center justify-center text-center  shadow-lg font-mono"
                     style={{ backgroundColor: colors[index % colors.length] }}
                   >
                     {skill}
@@ -89,12 +89,12 @@ const AboutPage = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold mt-4">Soft Skills</h3>
-              <ul className="grid grid-cols-5 gap-2">
+              <h3 className="font-semibold text-xl mb-2">Soft Skills</h3>
+              <ul className="grid grid-cols-4 gap-4">
                 {section.Detail["Soft Skills"].map((skill, index) => (
                   <li
                     key={skill}
-                    className="p-2 text-center my-2 rounded"
+                    className="p-2 rounded text-sm flex items-center justify-center text-center  shadow-lg font-mono"
                     style={{ backgroundColor: colors[index % colors.length] }}
                   >
                     {skill}
@@ -111,7 +111,7 @@ const AboutPage = () => {
             {Object.entries(section.Detail).map(([role, info]) => (
               <div key={role} className="mb-4">
                 <h3 className="text-2xl font-semibold mb-2">{role}</h3>
-                <p className="mb-4"> {info.Duration}</p>
+                <p className="mb-4 text-gray-600"> {info.Duration}</p>
                 <p className="text-xl">{info.Description}</p>
               </div>
             ))}
@@ -125,10 +125,11 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 pt-4">
-        <div className="col-span-1">
+      <div className="grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32">
+        <div className="col-span-1 border-r-2 mr-16 border-gray-400">
           <h1 className="text-4xl font-bold">About</h1>
         </div>
+
         <div className="col-span-3 max-w-2xl">
           {activeSection ? (
             <div>
@@ -150,10 +151,8 @@ const AboutPage = () => {
           {Object.keys(MyDetails).map((key) => (
             <p
               key={key}
-              className={`rounded-sm text-xl p-2 mb-8 hover:cursor-pointer hover:bg-amber-200 hover:shadow-gray-200 hover:shadow-[2px_4px_8px] active:bg-amber-300 ${
-                activeSection === key
-                  ? "bg-amber-200 shadow-gray-200 shadow-[2px_4px_8px]"
-                  : ""
+              className={`border-2 border-white rounded-sm text-xl p-2 mb-8 hover:cursor-pointer hover:bg-black hover:text-white hover:shadow-lg active:bg-white active:text-black active:border-2 active:border-black ${
+                activeSection === key ? "bg-black shadow-lg text-white" : ""
               }`}
               onClick={() => setActiveSection(key)}
             >

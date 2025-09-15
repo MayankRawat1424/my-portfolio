@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
       <div className=" grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 ">
-        <div className="col-span-1">
+        <div className="col-span-1 border-r-2 mr-16 border-gray-400">
           <Image
             src="/MRawat.jpeg"
             alt="My Profile Picture"
@@ -32,28 +32,28 @@ const HomePage = () => {
         <div className="col-span-1">
           <dl>
             <div>
-              <dt className="text-sm mb-2 font-semibold text-gray-900">
+              <dt className="text-xl mb-2 font-semibold text-gray-900">
                 Web Development
               </dt>
-              <dd className="text-gray-600 mb-8">
+              <dd className="text-gray-600 mb-8 text-md">
                 Building responsive and accessible web applications.
               </dd>
             </div>
 
             <div>
-              <dt className="text-sm mb-2 font-semibold text-gray-900">
+              <dt className="text-xl mb-2 font-semibold text-gray-900">
                 Cloud Technologies
               </dt>
-              <dd className="text-gray-600 mb-8">
+              <dd className="text-gray-600 mb-8 text-md">
                 Deploying and managing applications on cloud platforms.
               </dd>
             </div>
 
             <div>
-              <dt className="text-sm mb-2 font-semibold text-gray-900">
+              <dt className="text-xl mb-2 font-semibold text-gray-900">
                 Machine Learning
               </dt>
-              <dd className="text-gray-600 mb-8">
+              <dd className="text-gray-600 mb-8 text-md">
                 Implementing ML models to solve real-world problems.
               </dd>
             </div>

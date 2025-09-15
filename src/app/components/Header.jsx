@@ -9,16 +9,24 @@ const Header = () => {
         <nav className="col-span-1">
           <ul className="flex justify-between text-sm">
             <li>
-              <button className="hover:cursor-pointer">Home</button>
+              <button className="hover:cursor-pointer hover:text-gray-500 active:text-black">
+                Home
+              </button>
             </li>
             <li>
-              <button className="hover:cursor-pointer">About</button>
+              <button className="hover:cursor-pointer hover:text-gray-500 active:text-black">
+                About
+              </button>
             </li>
             <li>
-              <button className="hover:cursor-pointer">Projects</button>
+              <button className="hover:cursor-pointer hover:text-gray-500 active:text-black">
+                Projects
+              </button>
             </li>
             <li>
-              <button className="hover:cursor-pointer">Contact</button>
+              <button className="hover:cursor-pointer hover:text-gray-500 active:text-black">
+                Contact
+              </button>
             </li>
           </ul>
         </nav>

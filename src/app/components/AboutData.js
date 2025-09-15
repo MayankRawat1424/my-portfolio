@@ -57,7 +57,6 @@ export const MyDetails = {
         "Time Management",
         "Critical Thinking",
         "Leadership",
-        "Emotional Intelligence",
       ],
     },
   },
