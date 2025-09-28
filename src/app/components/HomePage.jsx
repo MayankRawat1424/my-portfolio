@@ -6,9 +6,9 @@ const HomePage = () => {
     <>
       <section
         id="home"
-        className=" grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32"
+        className="grid grid-cols-1 md:grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32 "
       >
-        <div className="col-span-1 border-r-2 mr-16 border-gray-400">
+        <div className="col-span-1  mr-16 md:border-r-2 md:border-gray-400 mb-8">
           <Image
             src="/MRawat.jpeg"
             alt="My Profile Picture"
@@ -16,7 +16,7 @@ const HomePage = () => {
             height={150}
           />
         </div>
-        <div className="col-span-3 max-w-2xl">
+        <div className="col-span-3 max-w-2xl mb-20 md:mb-0">
           <p className="font-bold text-3xl mb-4">Hi, I'm Mayank Rawat</p>
           <p className="text-3xl mb-8">
             I love turning ideas into clean, functional, and user-friendly web

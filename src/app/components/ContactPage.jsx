@@ -1,21 +1,18 @@
 import React from "react";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa";
-import { SiGithub } from "react-icons/si";
 
 const ContactPage = () => {
   return (
     <section
       id="contact"
-      className=" grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32"
+      className=" grid grid-cols-1 md:grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32"
     >
-      <div className="col-span-1 border-r-2 mr-16 border-gray-400">
+      <div className="col-span-1 md:border-r-2 mr-16 md:border-gray-400 mb-8">
         <h1 className="text-4xl font-bold">Contact</h1>
       </div>
       <div className="col-span-3 max-w-2xl">
-        <p className="text-xl mb-2">Thanks for visiting!</p>
-        <h1 className="text-3xl font-bold mb-2">Get in Touch</h1>
-        <p className="text-md mb-4">
+        <p className="text-xl mb-4">Thanks for visiting!</p>
+        <h1 className="text-3xl font-bold mb-4">Get in Touch</h1>
+        <p className="text-md mb-8">
           All messages are sent directly to my email, and I'll make sure to
           respond promptly. I look forward to connecting with you and discussing
           your ideas!
@@ -73,43 +70,6 @@ const ContactPage = () => {
         </form>
       </div>
       <div className="col-span-1"></div>
-      <div className="col-span-1"></div>
-      <div className="col-span-3">
-        <div className=" flex mt-12 justify-evenly text-4xl mb-8">
-          <a
-            href="https://x.com/babyboytycoon"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaXTwitter />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/mayank-rawat-a6971924b/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="https://github.com/MayankRawat1424"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiGithub />
-          </a>
-        </div>
-        <div className="text-sm font-mono text-center">
-          <p>
-            <b>Mail:</b>{" "}
-            <a href="mailto:mayankrawat1424@gmail.com">
-              <u>mayankrawat1424@gmail.com</u>
-            </a>
-          </p>
-          <p>
-            <b>Location:</b> Dehradun, India
-          </p>
-        </div>
-      </div>
     </section>
   );
 };

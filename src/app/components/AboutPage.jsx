@@ -42,7 +42,7 @@ const AboutPage = () => {
         return (
           <>
             {/* <img src="/inst.jpeg" alt="" className="mb-8" /> */}
-            <p className="text-lg tracking-wider ">{section.Detail}</p>
+            <p className="text-lg tracking-wide ">{section.Detail}</p>
           </>
         );
 
@@ -75,7 +75,7 @@ const AboutPage = () => {
           <div>
             <div className="mb-8">
               <h3 className="font-semibold text-xl mb-2">Hard Skills</h3>
-              <ul className="grid grid-cols-5 gap-4 ">
+              <ul className="grid grid-cols-3 md:grid-cols-5 gap-4 ">
                 {section.Detail["Hard Skills"].map((skill, index) => (
                   <li
                     key={skill}
@@ -90,7 +90,7 @@ const AboutPage = () => {
 
             <div>
               <h3 className="font-semibold text-xl mb-2">Soft Skills</h3>
-              <ul className="grid grid-cols-4 gap-4">
+              <ul className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 {section.Detail["Soft Skills"].map((skill, index) => (
                   <li
                     key={skill}
@@ -127,13 +127,13 @@ const AboutPage = () => {
     <>
       <section
         id="about"
-        className="grid grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32"
+        className="grid grid-cols-1 md:grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32"
       >
-        <div className="col-span-1 border-r-2 mr-16 border-gray-400">
-          <h1 className="text-4xl font-bold">About</h1>
+        <div className="col-span-1 md:border-r-2 mr-16 md:border-gray-400">
+          <h1 className="text-4xl font-bold mb-8">About</h1>
         </div>
 
-        <div className="col-span-3 max-w-2xl">
+        <div className="col-span-3 max-w-2xl mb-20 md:mb-0">
           {activeSection ? (
             <div>
               <h2
@@ -150,9 +150,9 @@ const AboutPage = () => {
             </p>
           )}
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 flex flex-col">
           {Object.keys(MyDetails).map((key) => (
-            <p
+            <button
               key={key}
               className={`rounded-sm text-xl px-4 py-2 mb-8 border border-gray-400 transition-all duration-300 
                 hover:cursor-pointer hover:bg-black hover:text-white hover:shadow-lg 
@@ -165,7 +165,7 @@ const AboutPage = () => {
               onClick={() => setActiveSection(key)}
             >
               {MyDetails[key].Title}
-            </p>
+            </button>
           ))}
         </div>
       </section>

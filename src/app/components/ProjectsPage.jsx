@@ -28,10 +28,10 @@ const ProjectsPage = () => {
   return (
     <section
       id="projects"
-      className="grid grid-cols-5 px-4 max-w-7xl mx-auto scroll-mt-32 pb-5 mb-32"
+      className="grid grid-cols-1 md:grid-cols-5 px-4 max-w-7xl mx-auto scroll-mt-32 pb-5 mb-32"
     >
-      <div className="col-span-1 border-r-2 mr-16 border-gray-400">
-        <h1 className="text-4xl font-bold">Projects</h1>
+      <div className="col-span-1 md:border-r-2 mr-16 md:border-gray-400">
+        <h1 className="text-4xl font-bold mb-8">Projects</h1>
       </div>
 
       <div className="col-span-4">
