@@ -35,7 +35,7 @@ const HomePage = () => {
         <div className="col-span-1">
           <dl>
             <div>
-              <dt className="text-xl mb-2 font-semibold text-gray-900">
+              <dt className="text-md mb-2 font-semibold text-gray-600">
                 Web Development
               </dt>
               <dd className="text-gray-600 mb-8 text-md">
@@ -44,7 +44,7 @@ const HomePage = () => {
             </div>
 
             <div>
-              <dt className="text-xl mb-2 font-semibold text-gray-900">
+              <dt className="text-md mb-2 font-semibold text-gray-600">
                 Cloud Technologies
               </dt>
               <dd className="text-gray-600 mb-8 text-md">
@@ -53,7 +53,7 @@ const HomePage = () => {
             </div>
 
             <div>
-              <dt className="text-xl mb-2 font-semibold text-gray-900">
+              <dt className="text-md mb-2 font-semibold text-gray-600">
                 Machine Learning
               </dt>
               <dd className="text-gray-600 mb-8 text-md">

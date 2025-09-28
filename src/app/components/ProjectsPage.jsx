@@ -35,7 +35,7 @@ const ProjectsPage = () => {
       </div>
 
       <div className="col-span-4">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-3 max-w-2xl">
             <h2 className="text-3xl font-bold mb-4">{title}</h2>
             <img
@@ -51,26 +51,31 @@ const ProjectsPage = () => {
           </div>
 
           <div className="col-span-1">
-            <h4 className="text-xl mb-2 font-semibold text-gray-900">
-              Frontend
-            </h4>
-            <ul className="text-gray-600 mb-8 text-md">
-              {project.tech.frontend.map((tech) => (
-                <li key={tech} className="mb-1">
-                  {tech}
-                </li>
-              ))}
-            </ul>
-            <h4 className="text-xl mb-2 font-semibold text-gray-900">
-              Backend
-            </h4>
-            <ul className="text-gray-600 mb-8 text-md">
-              {project.tech.backend.map((tech) => (
-                <li key={tech} className="mb-1">
-                  {tech}
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h4 className="text-xl mb-2 font-semibold text-gray-900">
+                Frontend
+              </h4>
+              <ul className="text-gray-600 mb-8 text-md">
+                {project.tech.frontend.map((tech) => (
+                  <li key={tech} className="mb-1">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xl mb-2 font-semibold text-gray-900">
+                Backend
+              </h4>
+              <ul className="text-gray-600 mb-8 text-md">
+                {project.tech.backend.map((tech) => (
+                  <li key={tech} className="mb-1">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <div className="flex items-center text-sm gap-1 underline">
               <a href={project.git} target="_blank" rel="noopener noreferrer">
                 GitHub Repo
@@ -80,20 +85,22 @@ const ProjectsPage = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-1"></div>
-      <div className="col-span-3 mt-8 max-w-2xl flex justify-center gap-8">
-        <button
-          onClick={handlePrev}
-          className="p-3 rounded-full border border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 active:scale-95 transition-all duration-300 shadow-sm"
-        >
-          <FaChevronLeft size={20} />
-        </button>
-        <button
-          onClick={handleNext}
-          className="p-3 rounded-full border border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 active:scale-95 transition-all duration-300 shadow-sm"
-        >
-          <FaChevronRight size={20} />
-        </button>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="col-span-1"></div>
+        <div className="col-span-3 mt-8 max-w-2xl flex justify-center gap-8">
+          <button
+            onClick={handlePrev}
+            className="p-3 rounded-full border border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 active:scale-95 transition-all duration-300 shadow-sm"
+          >
+            <FaChevronLeft size={20} />
+          </button>
+          <button
+            onClick={handleNext}
+            className="p-3 rounded-full border border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 active:scale-95 transition-all duration-300 shadow-sm"
+          >
+            <FaChevronRight size={20} />
+          </button>
+        </div>
       </div>
     </section>
   );
