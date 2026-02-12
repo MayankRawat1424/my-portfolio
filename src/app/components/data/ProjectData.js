@@ -1,37 +1,37 @@
 export const MyProjects = {
-  "Test Project2": {
-    img: "/project1.png",
+  Lock_In: {
+    img: "/Lock_In.png",
     description:
-      "<b>Test Project2</b> is a portfolio builder that helps users create sleek personal websites with minimal effort.",
-    git: "https://github.com/MayankRawat1424",
+      "<b>Lock_In </b> is an RSVP (Rapid Serial Visual Presentation) based web application designed to dramatically improve reading speed and focus. Instead of displaying text in traditional paragraph format, the app presents one word at a time at a fixed position on the screen. This eliminates the need for eye movement across lines and reduces subvocalization, allowing users to process text significantly faster while maintaining comprehension.",
+    git: "https://github.com/MayankRawat1424/Lock_In",
     tech: {
-      frontend: ["Next.Js", "Tailwind CSS", "Framer Motion"],
-      backend: ["Node.js", "Express"],
+      frontend: ["React.Js", "Next.Js", "Tailwind CSS"],
+      backend: ["Node.js"],
     },
-    achievement: "Reached 100+ active users in the first month.",
+    achievement: "",
   },
 
-  "Test Project3": {
-    img: "/project1.png",
+  deFace: {
+    img: "/deFace.png",
     description:
-      "<b>Test Project3</b> is a task management tool designed for teams to collaborate and track progress efficiently.",
-    git: "https://github.com/MayankRawat1424",
+      "<b>deFace</b> is a web application built to automatically detect and censor faces in images, designed specifically for journalists, editors, and media professionals who need to protect identities quickly and reliably.",
+    git: "https://github.com/MayankRawat1424/DeFace",
     tech: {
-      frontend: ["React.Js", "Redux", "Material UI"],
-      backend: ["Django", "PostgreSQL"],
+      frontend: ["React.Js", "Tailwind CSS"],
+      backend: ["MediaPipe"],
     },
-    achievement: "Implemented real-time sync using WebSockets.",
+    achievement: "",
   },
 
-  "Test Project4": {
-    img: "/project1.png",
+  "Cumulonimbus OIMS": {
+    img: "/Cumulonimbus.png",
     description:
-      "<b>Test Project4</b> is a machine learning powered news classifier that organizes articles by category.",
-    git: "https://github.com/MayankRawat1424",
+      "<b>Cumulonimbus OIMS</b> is a comprehensive Order & Inventory Management Solution designed specifically for small and medium-scale businesses to streamline operations, reduce manual errors, and improve visibility across the supply chain.",
+    git: "https://github.com/MayankRawat1424/Cumulonimbus_OIMS",
     tech: {
-      frontend: ["React.Js", "Chart.js"],
-      backend: ["FastAPI", "SQLite"],
+      frontend: ["React.Js", "Tailwind CSS", "ShadCN Charts"],
+      backend: ["Express.Js", "Node.Js", "SQLite"],
     },
-    achievement: "Achieved 92% accuracy on test dataset.",
+    achievement: "",
   },
 };

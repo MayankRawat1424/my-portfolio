@@ -3,7 +3,7 @@ export const MyDetails = {
     Img: "",
     Title: "Introduction",
     Detail:
-      "Hi! I’m Mayank Rawat from Dehradun, Uttarakhand, currently pursuing a B.Tech in Computer Science and Engineering at Graphic Era Hill University. I’m a Front-End Developer and a Machine Learning Enthusiast, passionate about building modern web applications, exploring cloud technologies, and applying machine learning to solve real-world problems.",
+      "Hi! I’m Mayank Rawat from Dehradun, Uttarakhand, currently pursuing a B.Tech in Computer Science and Engineering at Graphic Era Hill University. I’m a Full-Stack Web Developer and a Machine Learning Enthusiast, passionate about building modern web applications, exploring cloud technologies, and applying machine learning to solve real-world problems.",
   },
   "Education Qualification": {
     Img: "",

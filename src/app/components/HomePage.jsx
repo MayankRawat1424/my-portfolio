@@ -8,7 +8,7 @@ const HomePage = () => {
         id="home"
         className="grid grid-cols-1 md:grid-cols-5 px-4 max-w-7xl mx-auto pb-5 mb-32 scroll-mt-32 "
       >
-        <div className="col-span-1  mr-16 md:border-r-2 md:border-gray-400 mb-8">
+        <div className="col-span-1  mr-16 md:border-r-2 md:border-gray-400 pb-8">
           <Image
             src="/MRawat.jpeg"
             alt="My Profile Picture"
