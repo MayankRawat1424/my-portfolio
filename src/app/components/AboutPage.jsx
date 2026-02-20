@@ -92,7 +92,7 @@ const AboutPage = () => {
                   {Object.entries(section.Detail).map(([degree, info]) => (
                     <div
                       key={degree}
-                      className="mb-4 px-4 py-2 shadow-lg border-gray-400 border-2 rounded-sm"
+                      className="mb-4 px-4 py-2 shadow-lg border-gray-400 border-2 rounded-sm hover:scale-102 transition-transform duration-300"
                     >
                       <h3 className="text-xl mb-4 font-semibold">{degree}</h3>
 
@@ -121,7 +121,7 @@ const AboutPage = () => {
                       {section.Detail["Hard Skills"].map((skill, index) => (
                         <li
                           key={skill}
-                          className="p-2 rounded text-sm flex items-center justify-center text-center shadow-lg font-mono"
+                          className="p-2 rounded text-sm flex items-center justify-center text-center shadow-lg font-mono hover:scale-115 transition-transform duration-200"
                           style={{
                             backgroundColor: colors[index % colors.length],
                           }}
@@ -138,7 +138,7 @@ const AboutPage = () => {
                       {section.Detail["Soft Skills"].map((skill, index) => (
                         <li
                           key={skill}
-                          className="p-2 rounded text-sm flex items-center justify-center text-center shadow-lg font-mono"
+                          className="p-2 rounded text-sm flex items-center justify-center text-center shadow-lg font-mono hover:scale-115 transition-transform duration-200"
                           style={{
                             backgroundColor: colors[index % colors.length],
                           }}
