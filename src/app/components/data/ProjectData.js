@@ -1,4 +1,16 @@
 export const MyProjects = {
+  Jizo: {
+    img: "/Jizo.png",
+    description:
+      "<b>Jizo </b> is a PySide6-based desktop application for low-latency WAV preview and keyboard-driven sample organization. The tool integrates sounddevice for real-time playback, pyqtgraph for waveform and spectrogram visualization. Designed for efficient dataset curation, it emphasizes event-driven design, state management, and performance-oriented audio handling.",
+    git: "https://github.com/MayankRawat1424/Jizo",
+    tech: {
+      frontend: ["PySlide6", "Pyqtgraph"],
+      backend: ["NumPy", "Sounddevice", "Soundfile"],
+    },
+    achievement: "",
+  },
+
   Lock_In: {
     img: "/Lock_In.png",
     description:
