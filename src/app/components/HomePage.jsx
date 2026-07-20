@@ -28,7 +28,7 @@ const HomePage = () => {
             to create impactful solutions.
           </p>
           <p className="text-xl tracking-wide">
-            Explore my work and learn more about me — see projects I'm proud of,
+            Explore my work and learn more about me - see projects I'm proud of,
             or get in touch to collaborate.
           </p>
         </div>
