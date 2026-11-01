@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Class-based dark mode: `.dark` on <html> is set before first paint by the
+   inline script in layout.tsx, and toggled by ThemeToggle. */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Semantic colour tokens. Components use these (bg-bg, text-muted,
+   border-line, ...) so both themes come from the variables below. */
+@theme {
+  --color-bg: #ffffff;
+  --color-fg: #0a0a0a;
+  --color-muted: #52525b;
+  --color-line: #d4d4d8;
+  --color-surface: #fafafa;
+}
+
+.dark {
+  --color-bg: #0b0b0c;
+  --color-fg: #ededed;
+  --color-muted: #a1a1aa;
+  --color-line: #3f3f46;
+  --color-surface: #18181b;
+  color-scheme: dark;
+}
+
+:root:not(.dark) {
+  color-scheme: light;
 }
 
 body {
-  background: white;
-  color: black;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  /* Preserved from the original design: "geist" is not a loaded family, so the
+     browser default is used. Switch to var(--font-sans) to use Geist. */
   font-family: geist;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+/* Skill tag: pastel fill in light mode, tinted glass with coloured text in
+   dark mode. `--tag` is set per group. */
+.skill-tag {
+  background-color: var(--tag);
+  color: #18181b;
+}
+
+.dark .skill-tag {
+  background-color: color-mix(in oklab, var(--tag) 14%, transparent);
+  color: var(--tag);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--tag) 30%, transparent);
+}
+
+/* Background blob motion. Tailwind v4's translate-* utilities use the separate
+   `translate` property, so these transforms compose with them. Two loops with
+   unrelated periods keep the combined movement from looking repetitive. */
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: rotate(0deg) translate(0, 0) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) translate(18%, -12%) scale(1.15);
+  }
+  50% {
+    transform: rotate(180deg) translate(-6%, 16%) scale(0.9);
+  }
+  75% {
+    transform: rotate(270deg) translate(-18%, -8%) scale(1.1);
+  }
+}
+
+/* Squash and stretch, so the outline itself seems to change shape. */
+@keyframes blob-wobble {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(1.2, 0.85);
+  }
+  66% {
+    transform: scale(0.85, 1.15);
+  }
+}
+
+.blob-drift {
+  animation: blob-drift 18s ease-in-out infinite;
+}
+
+.blob-wobble {
+  animation: blob-wobble 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-drift,
+  .blob-wobble {
+    animation: none;
+  }
+
+  body {
+    transition: none;
+  }
 }
